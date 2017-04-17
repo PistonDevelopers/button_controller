@@ -58,6 +58,7 @@ impl ButtonController {
         use math::is_inside;
         use input::MouseButton;
 
+        self.events.clear();
         if let Some(pos) = e.mouse_cursor_args() {
             let inside = is_inside(pos, transform, layout);
             if inside {
