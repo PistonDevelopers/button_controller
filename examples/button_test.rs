@@ -14,17 +14,14 @@ fn main() {
     let click_me_layout = [10.0, 60.0, 280.0, 180.0];
     while let Some(e) = window.next() {
         click_me.event(click_me_layout, math::identity(), &e);
-        if click_me.events.len() > 0 {
-            for e in &click_me.events {
-                println!("{}", match *e {
-                    ButtonEvent::Click => "Click",
-                    ButtonEvent::MouseEnter => "MouseEnter",
-                    ButtonEvent::MouseLeave => "MouseLeave",
-                    ButtonEvent::Press => "Press",
-                    ButtonEvent::Cancel => "Cancel",
-                })
-            }
-            click_me.events.clear();
+        for e in &click_me.events {
+            println!("{}", match *e {
+                ButtonEvent::Click => "Click",
+                ButtonEvent::MouseEnter => "MouseEnter",
+                ButtonEvent::MouseLeave => "MouseLeave",
+                ButtonEvent::Press => "Press",
+                ButtonEvent::Cancel => "Cancel",
+            })
         }
 
         window.draw_2d(&e, |c, g| {
