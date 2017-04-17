@@ -1,6 +1,6 @@
 [package]
 name = "piston-button_controller"
-version = "0.1.1"
+version = "0.1.2"
 authors = ["Sven Nilsen <bvssvni@gmail.com>"]
 keywords = ["controller", "button", "piston"]
 description = "A Piston library for handling button state and events"
@@ -19,3 +19,4 @@ pistoncore-input = "0.17.0"
 
 [dev-dependencies]
 piston_window = "0.63.0"
+pistoncore-sdl2_window = "0.41.0"

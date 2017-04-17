@@ -102,6 +102,7 @@ impl ButtonController {
         use input::Touch;
         use math::is_inside;
 
+        self.events.clear();
         let window_size = window_size.into();
         if let Some(args) = e.touch_args() {
             let pos = args.position();
