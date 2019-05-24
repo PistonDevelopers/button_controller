@@ -24,7 +24,7 @@ fn main() {
             })
         }
 
-        window.draw_2d(&e, |c, g| {
+        window.draw_2d(&e, |c, g, _| {
             clear([1.0; 4], g);
             let color = match click_me.state(0.2) {
                 ButtonState::Inactive => [0.6, 0.6, 0.6, 1.0],
